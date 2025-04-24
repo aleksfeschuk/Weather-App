@@ -1,0 +1,15 @@
+.temperature {
+    display: flex;
+  
+    #temp {
+      font-size: 70px;
+      font-weight: 100;
+      line-height: 1;
+    }
+  
+    span {
+      font-size: 40px;
+      margin-top: -10px;
+      display: block;
+    }
+}

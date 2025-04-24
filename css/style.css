@@ -1,0 +1,18 @@
+/* Error: There is no module with the namespace "var".
+ *    ,
+ * 21 |             border: 1px solid var.$primary-clr;
+ *    |                               ^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\components\_search.scss 21:31  @use
+ *   scss\main.scss 5:1                  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: There is no module with the namespace "var".\a    \2577 \a 21 \2502              border: 1px solid var.$primary-clr;\d\a    \2502                                ^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\components\\_search.scss 21:31  @use\a   scss\\main.scss 5:1                  root stylesheet';
+}

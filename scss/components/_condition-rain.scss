@@ -1,0 +1,15 @@
+.condition-rain {
+    font-size: 12px;
+    text-transform: capitalize;
+  
+    div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+  
+        i {
+            width: 20px;
+        }
+    }
+}
