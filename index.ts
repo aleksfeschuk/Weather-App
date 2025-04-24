@@ -19,3 +19,28 @@ const visibilityStatus = document.querySelector('.visibility-status') as HTMLEle
 let current = "";
 let currentUnit: "C" | "F" = "C";
 let hourlyorWeek: "Hourly" | "Week" = "Week";
+
+
+function getDateTime():string {
+    const now = new Date();
+    let hour: number | string = now.getHours();
+    let minute: number | string = now.getMinutes();
+
+    const days = [
+        "Sunday", "Monday", "Tuesday", "Wednesday",
+        "Thursday", "Friday", "Saturday"
+    ];
+
+    hour = hour % 12 || 12;
+    if (hour < 10) hour = "0" + hour;
+    if (minute < 10) minute = "0" + minute;
+
+    const dayString = days[now.getDay()];
+    return `${dayString}, ${hour}:${minute}`;
+};
+
+date.innerHTML = getDateTime();
+
+setInterval(() => {
+    date.innerText = getDateTime();
+}, 1000); 
