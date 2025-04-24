@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 1000px;
+    padding: 50px;
+    background: $primary-clr;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("/images/cd.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease;        
+}
+
+img {
+    width: 100%;
+}

@@ -1,31 +1,16 @@
-@use "abstracts/variables" as var;
-@use "abstracts/mixins";
+@use "abstracts/variables";
 @use "base/reset";
 @use "base/typography";
+@use "base/base";
+@use "layout/wrapper";
+@use "layout/sidebar";
 @use "components/search";
 @use "components/weather-icon";
 @use "components/temperature";
 @use "components/divider";
 @use "components/condition-rain";
 @use "components/location";
-@use "components/nav";
-@use "components/cards";
-@use "components/highlights";
-@use "layout/sidebar";
 @use "layout/main";
-@use "layout/wrapper";
-
-body {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    min-width: 100px;
-    padding: 50px;
-    background: var.$primary-clr;
-    transition: background-image 0.3s ease;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), url("/images/cd.jpg"));
-}
-
-img {
-    width: 100%;
-}
+@use "components/card";
+@use "components/highlights";
+@use "components/card2";

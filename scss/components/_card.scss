@@ -1,9 +1,5 @@
+
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 50px;
-  
     .card {
         width: 100px;
         height: 130px;
@@ -15,17 +11,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-  
+
         h2 {
             font-size: 15px;
             font-weight: 600;
         }
-  
+
         .card-icon {
             width: 50%;
             margin: 0 auto;
         }
-  
+
         .day-temp {
             font-size: 12px;
             display: flex;
@@ -34,3 +30,5 @@
         }
     }
 }
+    
+
