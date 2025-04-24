@@ -44,3 +44,18 @@ date.innerHTML = getDateTime();
 setInterval(() => {
     date.innerText = getDateTime();
 }, 1000); 
+
+function getPublicIp(): void {
+    fetch("https://geolocation-db.com/json/", {
+        method: "GET"
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        const city = data.city;
+        getWeatherData(city, currentUnit, hourlyorWeek);
+    })
+    .catch(console.error);
+}
+
+getPublicIp();
+
