@@ -24,9 +24,10 @@ const weekBtn = document.querySelector(".week");
 const tempUnit = document.querySelectorAll(".temp-unit");
 const searchForm = document.querySelector("#search");
 const search = document.querySelector("#query");
-let current = "";
-let currentUnit = "C";
-let hourlyorWeek = "Week";
+let currentCity = "";
+let currentUnit = "c";
+let hourlyorWeek = "week";
+let currentFocus = 1;
 function getDateTime() {
     const now = new Date();
     let hour = now.getHours();

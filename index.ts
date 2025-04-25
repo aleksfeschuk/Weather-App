@@ -26,10 +26,43 @@ const search: HTMLInputElement | null = document.querySelector("#query");
 
 
 
-let current = "";
-let currentUnit: "C" | "F" = "C";
-let hourlyorWeek: "Hourly" | "Week" = "Week";
+let currentCity: string = "";
+let currentUnit: string = "c";
+let hourlyorWeek: string = "week";
+let currentFocus: number = 1;
 
+interface WeatherData {
+    resolvedAddress: string;
+    currentConditions: {
+        temp: number;
+        conditions: string;
+        precip: number;
+        uvindex: number;
+        windspeed: number;
+        humidity: number;
+        visibility: number;
+        winddir: number;
+        sunrise: string;
+        sunset: string;
+        icon: string;
+    };
+    days: Array<{
+        datetime: string;
+        temp: number;
+        icon: string;
+        hours: Array<{
+            datetime: string;
+            temp: number;
+            icon: string;
+        }>;
+    }>;
+}
+
+interface CitySuggestion {
+    name: string;
+    country: string;
+    state?: string;
+}
 
 function getDateTime():string {
     const now = new Date();
