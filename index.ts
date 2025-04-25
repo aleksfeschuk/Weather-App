@@ -1,20 +1,30 @@
-const temp = document.getElementById('temp') as HTMLElement;
-const date = document.getElementById("date-time") as HTMLElement;
-const currentLocation = document.querySelector(".location-text .location") as HTMLElement;
-const condition = document.getElementById('condition') as HTMLElement;
-const rain = document.getElementById('rain') as HTMLElement;
-const mainIcon = document.getElementById('icon') as HTMLImageElement;
+const temp: HTMLElement | null = document.getElementById('temp');
+const date: HTMLElement | null = document.getElementById("date-time");
+const currentLocation: HTMLElement | null = document.getElementById("location");
+const condition: HTMLElement | null = document.getElementById("condition");
+const rain: HTMLElement | null = document.getElementById("rain");
+const mainIcon: HTMLImageElement | null = document.getElementById("icon") as HTMLImageElement;
+const uvIndex: HTMLElement | null = document.querySelector('.uv-index');
+const uvText: HTMLElement | null = document.querySelector('.uv-text');
+const windSpeed: HTMLElement | null = document.querySelector('.wind-speed');
+const sunRise: HTMLElement | null = document.querySelector('.sun-rise');
+const sunSet: HTMLElement | null = document.querySelector('.sun-set');
+const humidity: HTMLElement | null = document.querySelector('.humidity');
+const visibility: HTMLElement | null = document.querySelector('.visibility');
+const humidityStatus: HTMLElement | null = document.querySelector('.humidity-status');
+const airQuality: HTMLElement | null = document.querySelector('.air-quality');
+const airQualityStatus: HTMLElement | null = document.querySelector('.air-quality-status');
+const visibilityStatus: HTMLElement | null = document.querySelector('.visibility-status');
+const weatherCards: HTMLElement | null = document.querySelector(".weather-cards");
+const celciusBtn: HTMLElement | null = document.querySelector(".celcius");
+const fahrenheitBtn: HTMLElement | null = document.querySelector(".fahrenheit");
+const hourlyBtn: HTMLElement | null = document.querySelector(".hourly");
+const weekBtn: HTMLElement | null = document.querySelector(".week");
+const tempUnit: NodeListOf<HTMLElement> = document.querySelectorAll(".temp-unit");
+const searchForm: HTMLFormElement | null = document.querySelector("#search");
+const search: HTMLInputElement | null = document.querySelector("#query");
 
-const uvIndex = document.querySelector('.uv-index') as HTMLElement;
-const uvText = document.querySelector('.uv-text') as HTMLElement;
-const winSpeed = document.querySelector('.wind-speed') as HTMLElement;
-const sunSet = document.querySelector('.sun-set') as HTMLElement;
-const humidity = document.querySelector('.humidity') as HTMLElement;
-const humidityStatus = document.querySelector('.humidity-status') as HTMLElement;
-const airQuality = document.querySelector('.air-quality') as HTMLElement;
-const airQualityStatus = document.querySelector('.air-quality-status') as HTMLElement;
-const visibility = document.querySelector('.visibility') as HTMLElement;
-const visibilityStatus = document.querySelector('.visibility-status') as HTMLElement;
+
 
 let current = "";
 let currentUnit: "C" | "F" = "C";
